@@ -1,0 +1,27 @@
+body {
+  background: #f3f3f3;
+}
+.main {
+  height: 10.4rem;
+  background: #2b85f5;
+}
+.main .balance-t {
+  text-align: center;
+  color: #fff;
+  margin: 2rem 0 1rem 0;
+  opacity: 0.8;
+}
+.main .balance-b {
+  color: #fff;
+  text-align: center;
+  font-size: 1.64rem;
+}
+.main-bg {
+  position: absolute;
+  top: 10.4rem;
+  width: 100%;
+}
+.once {
+  margin-top: 6rem;
+  text-align: center;
+}

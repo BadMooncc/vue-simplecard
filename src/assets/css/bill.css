@@ -1,0 +1,74 @@
+.adver-bill {
+  height: 3rem;
+}
+.adver-bill img {
+  width: 100%;
+  height: 3rem;
+}
+.bill {
+  height: 6.6rem;
+  background: url(/static/images/coupon-list.jpg) center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.time-picker {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  padding: 0 0.7rem;
+  margin-top: 1.3rem;
+}
+.time-picker div {
+  color: #fff;
+}
+.time-picker i {
+  color: #fff;
+}
+.time-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.bill-list {
+  padding: 0 0.6rem;
+  background: #fff;
+  margin-top: 0.4rem;
+}
+.bill-list .bill-item {
+  height: 2.7rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+.bill-list .bill-item .b-i-logo {
+  height: 1.9rem;
+  width: 1.9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: red;
+  margin-right: 0.7rem;
+}
+.bill-list .bill-item .b-i-des .title {
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #111;
+}
+.bill-list .bill-item .b-i-des .time {
+  margin-top: 0.2rem;
+  color: #999;
+}
+.bill-list .bill-item .b-i-info {
+  height: 1.9rem;
+  line-height: 1.9rem;
+  color: #111;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.select-time {
+    font-size: 1rem;
+    margin-top: 2.6rem;
+    text-align: center;
+    color: #fff;
+}
+.select-time .fa{
+  color:#fff;
+}

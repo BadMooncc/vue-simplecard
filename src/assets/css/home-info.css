@@ -1,0 +1,105 @@
+.wraper{
+  background: url(/static/images/home-info.jpg) center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main .tx {
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  margin: 1.5rem auto 0 auto;
+}
+.main .tx img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.25rem solid #fff;
+  margin: 0.35rem auto;
+  display: block;
+}
+.main .username {
+  margin: 0.6rem 0;
+  text-align: center;
+  color: #fff;
+  font-size: 0.64rem;
+}
+.user-list {
+  overflow: hidden;
+  position: relative;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  width: 8.5rem;
+  
+}
+.btn{
+  padding: 0.25rem 0.45rem;
+}
+.swiper-slide-cont{
+  border-radius: 0.2rem;
+  overflow: hidden;
+  width: 8.5rem;
+  height: 9.6rem;
+  background: #fff;
+  margin: 0 auto;
+}
+.swiper-slide-active {
+  opacity: 1;
+}
+.sl-title {
+  text-align: center;
+  color: #222;
+  font-size: 0.7rem;
+  margin: 1.2rem;
+}
+.sl-type {
+  text-align: center;
+}
+.contribute {
+  margin: 1.4rem 0;
+  color: #a0a0a0;
+  text-align: center;
+}
+.credit {
+  background: #00a0ea;
+  height: 1.82rem;
+  color: #fff;
+  line-height: 1.6rem;
+  text-align: center;
+}
+.fa-share-alt {
+  color: #fff;
+}
+.share{
+  width: 100%;
+  text-align: center;
+  margin:1rem 0;
+
+}
+.share .btn-block{
+  padding:0.5rem 0; 
+}
+.btn-default{
+  padding: 0.35rem 0.7rem 0.2rem 0.7rem;
+  color:#fff;
+  border: 1px solid #fff;
+  background:none;
+}
+.btn-danger{
+  padding: 0.35rem 0.7rem 0.2rem 0.7rem;
+}
+.swiper-container{
+    padding-top:0.75rem;
+    padding-bottom: 0.75rem;
+}

@@ -1,0 +1,42 @@
+.main {
+  padding: 0.6rem;
+  background: #fff;
+}
+.main .bill-des .logo {
+  width: 6rem;
+  margin: 0 auto;
+}
+.main .bill-des .logo span {
+  display: block;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  float: left;
+}
+.main .bill-des .logo img {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+.main .bill-des .info {
+  font-size: 2.2rem;
+  margin: 0.6rem 0 0 0;
+  text-align: center;
+}
+.main .bill-des .tip {
+  color: #999;
+  margin: 0.3rem 0 2rem 0;
+}
+.main .bill-item {
+  margin: 0.5rem 0;
+}
+.main .bill-item span {
+  display: block;
+  float: right;
+  color: #999;
+}
+.main .bill-class {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #ccc;
+}

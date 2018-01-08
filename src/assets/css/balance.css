@@ -1,0 +1,44 @@
+body {
+  background: #f3f3f3;
+}
+.text-center {
+  text-align: center;
+}
+.title {
+  margin: 0.8rem 0;
+}
+.amount {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+.amount strong {
+  font-size: 1.4rem;
+}
+.box {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  margin: 0 0 1.5rem 0;
+}
+.box > div {
+  height: 2rem;
+  line-height: 2rem;
+}
+.box > div > input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 90%;
+  font-size: 1.0rem;
+}
+.import {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+.once {
+  padding: 0 1rem;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none;
+}
