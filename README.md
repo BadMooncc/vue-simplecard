@@ -1,7 +1,7 @@
 # card2.0
 
 > A Vue.js project
-
+此项目使用vue+vue-router+vuex+axios实现，vuex简单管理头部与底部状态，布局使用移动端rem布局方案， 项目中使用swiper和echart插件
 ## Build Setup
 
 ``` bash
