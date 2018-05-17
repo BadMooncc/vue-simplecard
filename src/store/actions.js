@@ -1,5 +1,5 @@
 export default{
-	footerShow:({commit})=>{
+	footerShow:({commit})=>{//方法设置
 		commit('footerShow');
 	},
 	footerHide:({commit})=>{
