@@ -15,16 +15,13 @@ export default {
   name: 'app',
   computed:mapGetters(['header','footer']),
   mounted(){
-    console.log(this.$store.commit,'state');
     this.footerStatus();
     this.headerStatus();
     this.headerScroll();
-        console.log(mapGetters([
-    'footer',
-    'header'
-  ]))
+     
   },
   watch:{
+    //监控每次路由变化，做出对应的操作
     $route(to,from){
       this.footerStatus();
       this.headerStatus();
@@ -32,23 +29,26 @@ export default {
     }
   },
   methods:{
-    ...mapMutations(['headerShow','headerHide','footerShow','footerHide']),
+    ...mapMutations(['headerShow','headerHide','footerShow','footerHide']),//将mutations的方法映射到methos，以便于我们在下边可以直接使用this.headershow等方法，当然，如果你对es6比较生疏，那么这个可以删除，在下边使用this.$store.func来取代
     footerStatus(){
       if(this.$route.path=='/bill' || this.$route.path=='/my-coupon'|| this.$route.path=='/coupon-list'){
+        //判断指定路由是否显示底部tabbar
         this.footerHide();
       }else{
         this.footerShow();
       }
     },
     headerStatus(){
-      console.log(this.$route.path);
+      
       if(this.$route.path=='/my-coupon' || this.$route.path=='/bill/info' ||this.$route.path=='/balance'){
+        //判断指定路由是否显示头部
         this.headerHide();
       }else{
         this.headerShow();
       }
     },
     headerScroll(){
+      //上拉一定高度时，改变header变色
       var doc=document;
       var getScrollTop=()=>{  
               var scrollPos;  
