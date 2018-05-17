@@ -21,40 +21,49 @@
 				</div>
 			</div>
 		</section>
+		
 		<div class="content">
-			<div class="item clearfix">
-				<span class="circle-t circle"></span>
-				<span class="circle-b circle"></span>
-				<div class="pull-left i-left">
-					<router-link to="/coupon-info">
-						<div class="logo clearfix">
-							<img class="pull-left" src="/static/images/shop-logo.png" alt="" /> 
-							<span class="pull-left">&nbsp;123456蛋糕店</span>
-						</div>
-						<div class="clearfix item-info">
-							<div class="pull-left item-info-img">
-								<img src="/static/images/shop-list.png" alt="" />
-							</div>
-							<div class="pull-left item-info-des">
-								<h3 class="over-hidden">8.8折优惠券</h3>
-								<p class="over-hidden">数量：30张</p>
-								<p class="over-hidden">地址：河南农业大学大学</p>
-							</div>
-						</div>
-					</router-link>
-				</div>
-				<div class="pull-left i-right">
-					<div class="i-discount"><i>8.8折</i></div>
-					<div class="i-btn"><button class="btn btn-primary">立即领取</button></div>
-					<div class="i-get">10人已领</div>
-				</div>
-			</div>
-			
+			<list :msg="list" :name="name" @changelist="changelist"></list>
 		</div>
 	</div>
 </template>
 <script>
-	
+	import List from '@/components/list';
+	export default{
+		data(){
+			return{
+				name:"xiaoming ",
+				list:[
+					{
+						name:'蛋糕房',
+						num:20,
+						people:10,
+						local:'河南农业大学'
+					},
+					{
+						name:'蛋糕房',
+						num:20,
+						people:10,
+						local:'河南农业大学'
+					},
+					{
+						name:'蛋糕房',
+						num:20,
+						people:10,
+						local:'河南农业大学'
+					},
+				]
+			}
+		},
+		methods:{
+			changelist(){
+				this.list.push(1)
+			}
+		},
+		components:{
+			List
+		}
+	}
 </script>
 <style scoped>
 	@import '../assets/css/coupon-list.css'

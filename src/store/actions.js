@@ -1,14 +1,14 @@
 export default{
-	footerShow(){
+	footerShow:({commit})=>{
 		commit('footerShow');
 	},
-	footerHide(){
+	footerHide:({commit})=>{
 		commit('footerHide');
 	},
-	headerShow(){
+	headerShow:({commit})=>{
 		commit('headerShow');
 	},
-	headerHide(){
+	headerHide:({commit})=>{
 		commit('headerHide');
 	}
 

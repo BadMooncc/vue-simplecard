@@ -18,7 +18,7 @@ export default {
     this.footerStatus();
     this.headerStatus();
     this.headerScroll();
-     
+    
   },
   watch:{
     //监控每次路由变化，做出对应的操作
@@ -62,9 +62,9 @@ export default {
       window.onscroll=()=>{
         var a=getScrollTop();
         if(a>40){
-          this.$store.dispatch('headerActive');
+          this.$store.dispatch('headerHide');
         }else{
-          this.$store.dispatch('headerCommon');
+          this.$store.dispatch('headerShow');
         }
       }
     }
