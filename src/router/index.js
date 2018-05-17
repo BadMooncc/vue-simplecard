@@ -20,7 +20,7 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index,
-      beforeEnter:(to,form,next)=>{
+      beforeEnter:(to,form,next)=>{//独享钩子函数
         //alert(2);
         next();
       },beforeLeave:(to,form,next)=>{
