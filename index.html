@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>card2.0</title>
     <script>
-      (function(){
-        var html = document.documentElement;
-        var hWidth = html.getBoundingClientRect().width;
-        html.style.fontSize = hWidth / 15 + 'px';
-      })();
+      (function(doc, win) {
+          var docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function() {
+                  console.log('change')
+                  var clientWidth = docEl.clientWidth;
+                  if (!clientWidth) return;
+                  var hWidth = docEl.getBoundingClientRect().width;
+                  docEl.style.fontSize = hWidth / 15 + 'px';
+              };
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+      // (function(){
+      //   var html = document.documentElement;
+      //   var hWidth = html.getBoundingClientRect().width;
+      //   html.style.fontSize = hWidth / 15 + 'px';
+      // })();
     </script>
     <link rel="stylesheet" href="/static/css/normalize.css">
     <link rel="stylesheet" href="/static/font/css/font-awesome.min.css">
