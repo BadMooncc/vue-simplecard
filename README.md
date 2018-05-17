@@ -1,6 +1,6 @@
 # card2.0
 
-> 比较适合初学者参考的一个vue简单的项目，项目简单易懂。
+> 比较适合初学者参考的一个vue简单的项目，项目简单易懂，此项目我会长期维护，不端增加新的内容。
 项目使用vue+vue-router+vuex+axios实现，vuex简单管理头部与底部状态，布局使用移动端rem布局方案， 项目中使用swiper和echart插件。
 ## Build Setup
 
