@@ -108,10 +108,15 @@
 	export default{
 		data(){
 			return {}
-		},
-		createdBrfore(){
-			
-		},
+    },
+    mounted(){
+      console.log(this.$route ,'$router')
+    },
+		beforeRouteLeave(to, from, next) {
+        // ....
+        //alert('local')
+        next();
+    }
 	}
 </script>
 <style lang="css" scoped>

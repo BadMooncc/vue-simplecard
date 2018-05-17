@@ -1,8 +1,8 @@
 export default{
-	footer:(state)=>{
+	footer(state){
 		return state.footer;
 	},
-	header:(state)=>{
-		return state.header
+	header(state){
+		return state.header;
 	}
 }

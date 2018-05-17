@@ -1,24 +1,16 @@
-import getters from './getters';
-import state from './state';
+export default{
 
-
-const mutations={
-	footerHide(state){
-		state.footer=false;
+	headerShow(state){
+		state.header=true;
+	},
+	headerHide(state){
+		state.header=false;
 	},
 	footerShow(state){
 		state.footer=true;
 	},
-	headerCommon(state){
-		state.header=true;
-	},
-	headerActive(state){
-		state.header=false;
+	footerHide(state){
+		state.footer=false;
 	}
-}
 
-export default{
-	state,
-	mutations,
-	getters
 }

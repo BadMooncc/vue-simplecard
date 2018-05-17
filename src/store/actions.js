@@ -1,15 +1,15 @@
 export default{
-	footerHide:({commit})=>{
-		commit('footerHide');
-	},
-	footerShow:({commit})=>{
+	footerShow(){
 		commit('footerShow');
 	},
-	headerCommon:({commit})=>{
-		commit('headerCommon');
+	footerHide(){
+		commit('footerHide');
 	},
-	headerActive:({commit})=>{
-		commit('headerActive');
+	headerShow(){
+		commit('headerShow');
+	},
+	headerHide(){
+		commit('headerHide');
 	}
 
 }

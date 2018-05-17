@@ -11,6 +11,11 @@ import '@/assets/js/common.js';
 
 Vue.config.productionTip = false
 Vue.prototype.$http=axios;
+// console.log(router)
+router.beforeEach(((to,form,next)=>{
+  
+  next();
+}))
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

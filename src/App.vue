@@ -8,17 +8,21 @@
 <script>
 import CommonHeader from '@/components/CommonHeader';
 import FooterNav from '@/components/FooterNav';
-import {mapGetters,mapActions} from 'vuex';
+import {mapGetters,mapMutations} from 'vuex'
+console.log(mapMutations,'mapMutations');
+
 export default {
   name: 'app',
-  computed:mapGetters([
-    'footer',
-    'header'
-  ]),
+  computed:mapGetters(['header','footer']),
   mounted(){
+    console.log(this.$store.commit,'state');
     this.footerStatus();
     this.headerStatus();
-    this.headerScroll()
+    this.headerScroll();
+        console.log(mapGetters([
+    'footer',
+    'header'
+  ]))
   },
   watch:{
     $route(to,from){
@@ -28,19 +32,20 @@ export default {
     }
   },
   methods:{
+    ...mapMutations(['headerShow','headerHide','footerShow','footerHide']),
     footerStatus(){
       if(this.$route.path=='/bill' || this.$route.path=='/my-coupon'|| this.$route.path=='/coupon-list'){
-        this.$store.dispatch('footerHide');
+        this.footerHide();
       }else{
-        this.$store.dispatch('footerShow');
+        this.footerShow();
       }
     },
     headerStatus(){
-      console.log(this.$route.path)
+      console.log(this.$route.path);
       if(this.$route.path=='/my-coupon' || this.$route.path=='/bill/info' ||this.$route.path=='/balance'){
-        this.$store.dispatch('headerActive');
+        this.headerHide();
       }else{
-        this.$store.dispatch('headerCommon');
+        this.headerShow();
       }
     },
     headerScroll(){

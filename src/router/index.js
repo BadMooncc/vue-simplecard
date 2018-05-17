@@ -19,7 +19,14 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component: Index,
+      beforeEnter:(to,form,next)=>{
+        //alert(2);
+        next();
+      },beforeLeave:(to,form,next)=>{
+        alert(1);
+        next();
+      }
     },
     {
     	path: '/balance',
