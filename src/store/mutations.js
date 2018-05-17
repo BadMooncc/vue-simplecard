@@ -1,5 +1,4 @@
 export default{
-
 	headerShow(state){
 		state.header=true;
 	},
@@ -11,6 +10,12 @@ export default{
 	},
 	footerHide(state){
 		state.footer=false;
+	},
+	loadShow(state){
+		state.loader=true;
+	},
+	loadHide(state){
+		state.loader=false;
 	}
 
 }

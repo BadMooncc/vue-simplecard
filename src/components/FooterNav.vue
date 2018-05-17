@@ -10,7 +10,7 @@
 						
 					</li>
 					<li class="my-life">
-						<router-link to="/">
+						<router-link to="/my-coupon">
 							<i class="home-life-i"></i>
 							<p>我的生活</p>
 						</router-link>

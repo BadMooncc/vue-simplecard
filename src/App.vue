@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-  	<CommonHeader  class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
+  	<CommonHeader v-demo:a="123"  class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
     <router-view/>
     <FooterNav v-show="footer"></FooterNav>
+    <Loader v-show="loader"></Loader>
   </div>
 </template>
 <script>
 import CommonHeader from '@/components/CommonHeader';
 import FooterNav from '@/components/FooterNav';
+import Loader from '@/components/loading';
 import {mapGetters,mapMutations} from 'vuex'
 console.log(mapMutations,'mapMutations');
 
 export default {
   name: 'app',
-  computed:mapGetters(['header','footer']),
+  computed:mapGetters(['header','footer','loader']),
   mounted(){
     this.footerStatus();
     this.headerStatus();
@@ -72,7 +74,8 @@ export default {
   },
   components:{
   	CommonHeader,
-  	FooterNav
+  	FooterNav,
+    Loader
   }
   
 }

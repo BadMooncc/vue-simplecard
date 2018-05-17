@@ -1,4 +1,5 @@
 export default{
 	footer:true,
-	header:true
+	header:true,
+	loader:false
 }

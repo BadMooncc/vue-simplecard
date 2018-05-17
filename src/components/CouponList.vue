@@ -57,7 +57,7 @@
 		},
 		methods:{
 			changelist(){
-				this.list.push(1)
+				this.list.push(1);
 			}
 		},
 		components:{

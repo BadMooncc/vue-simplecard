@@ -7,7 +7,7 @@
 				<router-link to="/coupon-info">
 					<div class="logo clearfix">
 						<img class="pull-left" src="/static/images/shop-logo.png" alt="" /> 
-						<span class="pull-left">&nbsp;123456蛋糕店</span>
+						<span class="pull-left">&nbsp;{{item.name}}</span>
 					</div>
 					<div class="clearfix item-info">
 						<div class="pull-left item-info-img">

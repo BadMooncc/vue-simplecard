@@ -10,6 +10,11 @@ export default{
 	},
 	headerHide:({commit})=>{
 		commit('headerHide');
+	},
+	loadShow:({commit})=>{
+		commit('loadShow');
+	},
+	loadHide:({commit})=>{
+		commit('loadHide');
 	}
-
 }

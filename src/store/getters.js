@@ -4,5 +4,8 @@ export default{
 	},
 	header(state){
 		return state.header;
+	},
+	loader(state){
+		return state.loader;
 	}
 }
