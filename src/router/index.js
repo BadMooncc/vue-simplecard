@@ -1,78 +1,93 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/components/Index';
-import Balance from '@/components/Balance';
-import Bill from '@/components/Bill';
+//import Index from '@/components/Index';
+//import Balance from '@/components/Balance';
+// import Bill from '@/components/Bill';
 import BillInfo from '@/components/BillInfo';
 import HomeGrade from '@/components/HomeGrade';
 import HomeInfo from '@/components/HomeInfo';
 import CouponList from '@/components/CouponList';
-import MyCoupon from '@/components/MyCoupon';
+//import MyCoupon from '@/components/MyCoupon';
 import Wallet from '@/components/Wallet';
 import CouponInfo from '@/components/CouponInfo';
+import parent from '@/components/parent';
+import child from '@/components/child';
+
+
 
 Vue.use(Router);
+const Index = (reslove) => require.ensure([], () => { reslove(require('@/components/Index.vue')) }, 'Index');
+const MyCoupon = (reslove) => require.ensure([], () => { reslove(require('@/components/MyCoupon.vue')) }, 'MyCoupon');
+const Balance = reslove => require.ensure([], () => { reslove(require('@/components/Balance.vue')) }, 'Balance');
+const Bill = reslove => require.ensure([], () => { reslove (require('@/components/Bill.vue')) }, 'Bill')
+
+
 
 export default new Router({
-  scrollBehavior: () => ({ y: 0 }),//滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置
-  routes: [
-    {
+  //scrollBehavior: () => ({ y: 0 }), //滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置
+  routes: [{
       path: '/',
       name: 'Index',
       component: Index,
-      beforeEnter:(to,form,next)=>{//独享钩子函数
+      beforeEnter: (to, form, next) => { //独享钩子函数
         //alert(2);
         next();
-      },beforeLeave:(to,form,next)=>{
-        alert(1);
+      },
+      beforeLeave: (to, form, next) => {
+
         next();
       }
     },
     {
-    	path: '/balance',
-	      name: 'Balance',
-	      component: Balance
+      path: '/parent',
+      name: 'parent',
+      component: parent
     },
     {
-      path:'/bill',
-      name:'Bill',
-      component:Bill
+      path: '/balance',
+      name: 'Balance',
+      component: Balance
     },
     {
-      path:'/bill/info',
-      name:'BillInfo',
-      component:BillInfo
+      path: '/bill',
+      name: 'Bill',
+      component: Bill
     },
     {
-      path:'/home-grade',
-      name:'HomeGrade',
-      component:HomeGrade
+      path: '/bill/info',
+      name: 'BillInfo',
+      component: BillInfo
     },
     {
-      path:'/home-info',
-      name:'HomeInfo',
-      component:HomeInfo
+      path: '/home-grade',
+      name: 'HomeGrade',
+      component: HomeGrade
     },
     {
-      path:'/coupon-list',
-      name:'CouponList',
-      component:CouponList
+      path: '/home-info',
+      name: 'HomeInfo',
+      component: HomeInfo
     },
     {
-      path:'/my-coupon',
-      name:'MyCoupon',
-      component:MyCoupon
+      path: '/coupon-list',
+      name: 'CouponList',
+      component: CouponList
     },
     {
-      path:'/wallet',
-      name:'Wallet',
-      component:Wallet
+      path: '/my-coupon',
+      name: 'MyCoupon',
+      component: MyCoupon
     },
     {
-      path:'/coupon-info',
-      name:'CouponInfo',
-      component:CouponInfo
+      path: '/wallet',
+      name: 'Wallet',
+      component: Wallet
+    },
+    {
+      path: '/coupon-info',
+      name: 'CouponInfo',
+      component: CouponInfo
     }
-    
+
   ]
 })

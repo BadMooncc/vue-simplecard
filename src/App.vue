@@ -1,17 +1,43 @@
 <template>
   <div id="app">
-  	<CommonHeader v-demo:a="123"  class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
-    <router-view/>
-    <FooterNav v-show="footer"></FooterNav>
+      <transition name="fade">
+    	<CommonHeader v-demo2="{color:'red',text:'hello'}" v-demo:a="123"  class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
+    </transition>
+      <transition name="fade">
+        <router-view/>
+      </transition>
+      
+      <transition>
+        <FooterNav v-show="footer"></FooterNav>
+      </transition>
+      
+
     <Loader v-show="loader"></Loader>
   </div>
 </template>
+<style>
+  .fade-enter-active{
+    transition: all .4s;
+  }
+
+  .fade-leave-active {
+    transition: all .4s;
+  }
+
+.fade-enter{
+  opacity: 0;
+}
+
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+</style>
 <script>
 import CommonHeader from '@/components/CommonHeader';
 import FooterNav from '@/components/FooterNav';
 import Loader from '@/components/loading';
 import {mapGetters,mapMutations} from 'vuex'
-console.log(mapMutations,'mapMutations');
+//console.log(mapMutations,'mapMutations');
 
 export default {
   name: 'app',
@@ -64,9 +90,9 @@ export default {
       window.onscroll=()=>{
         var a=getScrollTop();
         if(a>40){
-          this.$store.dispatch('headerHide');
+          this.$store.commit('headerHide');
         }else{
-          this.$store.dispatch('headerShow');
+          this.$store.commit('headerShow');
         }
       }
     }

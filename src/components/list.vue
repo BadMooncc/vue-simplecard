@@ -43,7 +43,9 @@
 	export default{
 		methods:{
 			changelist(){
-				this.$emit('changelist')
+				this.$emit('changelist',{name:'123'},function(){
+					console.log(123);
+				})
 			}
 
 		},

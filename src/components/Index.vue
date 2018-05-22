@@ -6,13 +6,13 @@
 				<div class="person-tx pull-left"><img src="../assets/images/portairt.png"/></div>
 				<div class="pull-left info">
 					<div class="row clearfix">
-						<div class="name pull-left">Admin</div>
-						<div class="grade pull-right"><span class="tab-icon">Lv3</span> <i>铜牌会员</i></div>
+						<div class="name pull-left">{{data.name}}</div>
+						<div class="grade pull-right"><span class="tab-icon">Lv{{data.grade}}</span> <i>铜牌会员</i></div>
 					</div>
 					<div class="row progress-wraper">
-						<div class="already">已使用200天</div>
+						<div class="already">已使用{{data.existTime}}天</div>
 						<div class="progress-all">
-							<div class="progress-true"></div>
+							<div class="progress-true" :style="{width:'80%'}"></div>
 						</div>
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 							<i class="person-box-icon person-box-data"></i>
 						</div>
 						<div class="pull-left">
-							<p>积分 180</p>
+							<p>积分 {{data.integral}}</p>
 							<p>如何获取积分？</p>
 						</div>
 					</router-link>
@@ -36,7 +36,7 @@
 							<i class="person-box-icon person-box-card"></i>
 						</div>
 						<div class="pull-left person-num">
-							<p>积分 180</p>
+							<p>积分 {{data.integral}}</p>
 							<p>123456781000</p>
 						</div>
 					</router-link>
@@ -105,12 +105,69 @@
 	</div>
 </template>
 <script>
+  import $http from '@/utils/ajax.js';
 	export default{
 		data(){
-			return {}
+			return {
+        data:{}
+      }
     },
     mounted(){
-      console.log(this.$route ,'$router')
+      fetch('/api/index',{
+        method:'post',
+        headers:{
+          'Content-type':'x-www-form-urlencoded'
+        }
+      }).then(function(res){
+        return res.json();
+      }).then(function(res){
+        console.log(res);
+      })
+      //ar all= this.mergeReq(this.get1,this.get2);
+      //console.log(all,'all');
+      this.$http.get('/api/index').then((res)=>{
+        this.data=res.data;
+        
+      });
+    },
+    methods:{
+      mergeReq(){
+        var resTeam=[];
+        var limit=arguments.length;
+        console.log(arguments.length,'arguments length');
+        for(var i=0;i<limit;i++){
+          console.log('aaaaaaaa')
+          arguments[i]().then(function(res){
+            resTeam.push(res);
+            
+            if(resTeam.length>=limit){
+                console.log(resTeam);
+                
+            }
+            
+          })
+        }
+      },
+      get1(){
+        return $http({
+          method: 'POST',
+          url: '/api/index',
+          data: {
+              name1: 'value1',
+              name2: 'value2'
+          }
+        })   
+      },
+      get2(){
+        return $http({
+          method: 'POST',
+          url: 'http://result.eolinker.com/iPu4V1g5cfb3a7e3e423185dcd6b16cb5756f0351c19494?uri=www.eolinker.com/api/demo',
+          data: {
+              name1: 'value1',
+              name2: 'value2'
+          }
+        })      
+      },
     },
 		beforeRouteLeave(to, from, next) {
         // ....

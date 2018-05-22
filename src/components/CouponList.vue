@@ -56,7 +56,9 @@
 			}
 		},
 		methods:{
-			changelist(){
+			changelist(data,callback){
+				console.log(data);
+				callback();
 				this.list.push(1);
 			}
 		},
