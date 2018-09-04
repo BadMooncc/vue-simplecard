@@ -1,187 +1,180 @@
 <template>
-	<div>
-		<div class="person">
-			<div id="active-space"></div>
-			<div class="person-info clearfix">
-				<div class="person-tx pull-left"><img src="../assets/images/portairt.png"/></div>
-				<div class="pull-left info">
-					<div class="row clearfix">
-						<div class="name pull-left">{{data.name}}</div>
-						<div class="grade pull-right"><span class="tab-icon">Lv{{data.grade}}</span> <i>铜牌会员</i></div>
-					</div>
-					<div class="row progress-wraper">
-						<div class="already">已使用{{data.existTime}}天</div>
-						<div class="progress-all">
-							<div class="progress-true" :style="{width:'80%'}"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="person-b clearfix">
-				<div class="pull-left clearfix person-box">
-					<router-link to="">
-						<div class="pull-left">
-							<i class="person-box-icon person-box-data"></i>
-						</div>
-						<div class="pull-left">
-							<p>积分 {{data.integral}}</p>
-							<p>如何获取积分？</p>
-						</div>
-					</router-link>
-					
-				</div>
-				<div class="person-box pull-left">
-					<router-link to="">
-						<div class="pull-left">
-							<i class="person-box-icon person-box-card"></i>
-						</div>
-						<div class="pull-left person-num">
-							<p>积分 {{data.integral}}</p>
-							<p>123456781000</p>
-						</div>
-					</router-link>
-				</div>
-			</div>
-		</div>
-		<nav>
-			<ul class="clearfix">
-				<li class="home-info border-r border-b">
-					<router-link to="/home-info">
-						<i></i>
-						<p>家庭信息</p>
-					</router-link>
-					
-				</li>
-				<li class="home-grade border-r border-b">
-					<router-link to="/home-grade">
-						<i></i>
-						<p>家庭等级</p>
-					</router-link>
-					
-				</li>
-				<li class="home-bill border-b">
-					<router-link to="/bill">
-						<i></i>
-						<p>家庭账单</p>
-					</router-link>
-					
-				</li>
-				<li class="coupon-center border-r">
-					<router-link to="/coupon-list">
-						<i></i>
-						<p>卡券中心</p>
-					</router-link>
-					
-				</li>
-				<li class="my-coupon border-r">
-					<router-link to="/my-coupon">
-						<i></i>
-						<p>我的卡券</p>
-					</router-link>
-				</li>
-				<li class="my-wallet">
-					<router-link to="/wallet">
-						<i></i>
-						<p>我的钱包</p>
-					</router-link>
-					
-				</li>
-			</ul>
-		</nav>
-		<section class="activity">
-			<div class="title clearfix">
-				<div class="pull-left">
-					<i class="fa fa-clock-o"></i>
-					最新优惠活动
-				</div>
-				<div class="pull-right">
-					<router-link to="/coupon-list">全部 <i class="fa fa-angle-right"></i></router-link>
-				</div>
-			</div>
-			<div class="adver">
-				<img src="../assets/images/adver.jpg"/>
-			</div>
-		</section>
-	</div>
+  <div>
+    <div class="person">
+      <div id="active-space"></div>
+      <div class="person-info clearfix">
+        <div class="person-tx pull-left"><img src="../assets/images/portairt.png" /></div>
+        <div class="pull-left info">
+          <div class="row clearfix">
+            <div class="name pull-left">{{data.name}}</div>
+            <div class="grade pull-right">
+              <span class="tab-icon">Lv{{data.grade}}</span>
+              <i>铜牌会员</i>
+            </div>
+          </div>
+          <div class="row progress-wraper">
+            <div class="already">已使用{{data.existTime}}天</div>
+            <div class="progress-all">
+              <div class="progress-true" :style="{width:'80%'}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="person-b clearfix">
+        <div class="pull-left clearfix person-box">
+          <router-link to="">
+            <div class="pull-left">
+              <i class="person-box-icon person-box-data"></i>
+            </div>
+            <div class="pull-left">
+              <p>积分 {{data.integral}}</p>
+              <p>如何获取积分？</p>
+            </div>
+          </router-link>
+
+        </div>
+        <div class="person-box pull-left">
+          <router-link to="">
+            <div class="pull-left">
+              <i class="person-box-icon person-box-card"></i>
+            </div>
+            <div class="pull-left person-num">
+              <p>积分 {{data.integral}}</p>
+              <p>123456781000</p>
+            </div>
+          </router-link>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul class="clearfix">
+        <li class="home-info border-r border-b">
+          <router-link to="/home-info">
+            <i></i>
+            <p>家庭信息</p>
+          </router-link>
+
+        </li>
+        <li class="home-grade border-r border-b">
+          <router-link to="/home-grade">
+            <i></i>
+            <p>家庭等级</p>
+          </router-link>
+
+        </li>
+        <li class="home-bill border-b">
+          <router-link to="/bill">
+            <i></i>
+            <p>家庭账单</p>
+          </router-link>
+
+        </li>
+        <li class="coupon-center border-r">
+          <router-link to="/coupon-list">
+            <i></i>
+            <p>卡券中心</p>
+          </router-link>
+
+        </li>
+        <li class="my-coupon border-r">
+          <router-link to="/my-coupon">
+            <i></i>
+            <p>我的卡券</p>
+          </router-link>
+        </li>
+        <li class="my-wallet">
+          <router-link to="/wallet">
+            <i></i>
+            <p>我的钱包</p>
+          </router-link>
+
+        </li>
+      </ul>
+    </nav>
+    <section class="activity">
+      <div class="title clearfix">
+        <div class="pull-left">
+          <i class="fa fa-clock-o"></i>
+          最新优惠活动
+        </div>
+        <div class="pull-right">
+          <router-link to="/coupon-list">全部
+            <i class="fa fa-angle-right"></i>
+          </router-link>
+        </div>
+      </div>
+      <div class="adver">
+        <img src="../assets/images/adver.jpg" />
+      </div>
+    </section>
+  </div>
 </template>
 <script>
-  import $http from '@/utils/ajax.js';
-	export default{
-		data(){
-			return {
-        data:{}
+import $http from '@/utils/ajax.js'
+import { getPersonInfo } from '../api/'
+
+export default {
+  data () {
+    return {
+      data: {
+        name: '',
+        grade: '',
+        existTime: '',
+        integral: ''
+      }
+    }
+  },
+  mounted () {
+    getPersonInfo(this).then((res) => {
+      this.data = res.data;
+    });
+  },
+  methods: {
+    mergeReq () {
+      var resTeam = []
+      var limit = arguments.length
+      for (var i = 0; i < limit; i++) {
+        arguments[i]().then((res) => {
+          resTeam.push(res)
+          if (resTeam.length >= limit) {
+           
+          }
+        })
       }
     },
-    mounted(){
-      fetch('/api/index',{
-        method:'post',
-        headers:{
-          'Content-type':'x-www-form-urlencoded'
+    get1 () {
+      return $http({
+        method: 'POST',
+        url: '/api/index',
+        data: {
+          name1: 'value1',
+          name2: 'value2'
         }
-      }).then(function(res){
-        return res.json();
-      }).then(function(res){
-        console.log(res);
       })
-      //ar all= this.mergeReq(this.get1,this.get2);
-      //console.log(all,'all');
-      this.$http.get('/api/index').then((res)=>{
-        this.data=res.data;
-        
-      });
     },
-    methods:{
-      mergeReq(){
-        var resTeam=[];
-        var limit=arguments.length;
-        console.log(arguments.length,'arguments length');
-        for(var i=0;i<limit;i++){
-          console.log('aaaaaaaa')
-          arguments[i]().then(function(res){
-            resTeam.push(res);
-            
-            if(resTeam.length>=limit){
-                console.log(resTeam);
-                
-            }
-            
-          })
+    get2 () {
+      return $http({
+        method: 'POST',
+        url:
+          'http://result.eolinker.com/iPu4V1g5cfb3a7e3e423185dcd6b16cb5756f0351c19494?uri=www.eolinker.com/api/demo',
+        data: {
+          name1: 'value1',
+          name2: 'value2'
         }
-      },
-      get1(){
-        return $http({
-          method: 'POST',
-          url: '/api/index',
-          data: {
-              name1: 'value1',
-              name2: 'value2'
-          }
-        })   
-      },
-      get2(){
-        return $http({
-          method: 'POST',
-          url: 'http://result.eolinker.com/iPu4V1g5cfb3a7e3e423185dcd6b16cb5756f0351c19494?uri=www.eolinker.com/api/demo',
-          data: {
-              name1: 'value1',
-              name2: 'value2'
-          }
-        })      
-      },
-    },
-		beforeRouteLeave(to, from, next) {
-        // ....
-        //alert('local')
-        next();
+      })
     }
-	}
+  },
+  beforeRouteLeave (to, from, next) {
+    next()
+  }
+}
 </script>
 <style lang="css" scoped>
 body {
   background: #f3f3f3;
 }
-#active-space{
-	height: 2rem;
+#active-space {
+  height: 2rem;
 }
 .person {
   height: 10rem;
@@ -198,19 +191,19 @@ body {
 }
 
 .person-box-icon {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    background: url(/static/images/nav-icon.png) center no-repeat;
-    background-size: cover;
-    left: 0.2rem;
-    top: 0rem;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: url(/static/images/nav-icon.png) center no-repeat;
+  background-size: cover;
+  left: 0.2rem;
+  top: 0rem;
 }
 .person-box-data {
-    background-position: -11.8rem 0;
+  background-position: -11.8rem 0;
 }
 .person-box-card {
-    background-position: -13.9rem 0;
+  background-position: -13.9rem 0;
 }
 .person .person-info .person-tx img {
   width: 3rem;
@@ -274,22 +267,22 @@ body {
   margin-top: 2rem;
 }
 .person .person-b .person-box {
-    width: 50%;
-    height: 2rem;
-    padding: 0.28rem 1rem;
-    line-height: 2rem;
-    position: relative;
+  width: 50%;
+  height: 2rem;
+  padding: 0.28rem 1rem;
+  line-height: 2rem;
+  position: relative;
 }
 .person .person-b .person-box p {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 5.38rem;
-    height: 0.74rem;
-    color: #fff;
-    font-size: 0.5rem;
-    line-height: 0.7rem;
-    text-indent: 1.3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 5.38rem;
+  height: 0.74rem;
+  color: #fff;
+  font-size: 0.5rem;
+  line-height: 0.7rem;
+  text-indent: 1.3rem;
 }
 .person .person-b .person-box .fa-bookmark-o {
   font-size: 1.5rem;
@@ -394,5 +387,4 @@ nav .my-wallet i {
   height: 4.8rem;
   width: 100%;
 }
-
 </style>
