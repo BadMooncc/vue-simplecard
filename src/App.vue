@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <CommonHeader v-demo2="{color:'red',text:'hello'}" v-demo:a="123" class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
+      <CommonHeader class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
     </transition>
     <transition name="fade">
       <router-view/>
