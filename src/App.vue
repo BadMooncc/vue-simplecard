@@ -73,9 +73,9 @@ export default {
     },
     headerStatus () {
       if (
-        this.$route.path == '/my-coupon' ||
-        this.$route.path == '/bill/info' ||
-        this.$route.path == '/balance'
+        this.$route.path === '/my-coupon' ||
+        this.$route.path === '/bill/info' ||
+        this.$route.path === '/balance'
       ) {
         // 判断指定路由是否显示头部
         this.headerHide()
