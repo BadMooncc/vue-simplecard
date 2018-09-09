@@ -1,4 +1,4 @@
-impot $http from './ajax.js';
+import $http from './ajax.js';
 console.log($http);
 
 
