@@ -1,6 +1,5 @@
 <template>
 	<div>
-
 		<section class="main">
 			<div class="grade-wraper">
 				<div class="grade">
@@ -17,8 +16,7 @@
 	</div>
 </template>
 <style scoped>
-	@import '../assets/css/home-grade.css'
-
+	@import '../assets/css/home-grade.css';
 </style>
 <script>
 	var echarts = require('echarts/lib/echarts');
@@ -28,8 +26,12 @@
 	require('echarts/lib/component/tooltip');
 	require('echarts/lib/component/title');
 	export default{
-		mounted(){
-			var myChart=echarts.init(document.getElementById('echart')),
+		name: 'home-grade',
+		data () {
+			return {};
+		},
+		mounted (){
+			var myChart = echarts.init(document.getElementById('echart')),
 			option = {
 			    title:{
 			        // text:'近一周积分获取',
