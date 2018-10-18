@@ -1,12 +1,11 @@
-impot $http from './ajax.js';
+import $http from './ajax.js';
+
 console.log($http);
+var mergeReq = function () {
+    var reqTeam = [];
+    for (var i = arguments.length; i < 10; i++) {
+        reqTeam.push(arguments[i]);
+    }
+};
 
-
-var mergeReq=function(one,two){
-	var reqTeam=[];
-	for(var i=arguments.length;i++){
-		reqTeam.push(arguments[i]);
-	}
-	
-	
-}
+export default mergeReq;
