@@ -1,20 +1,21 @@
 export default{
-	footerShow:({commit})=>{//方法设置
+	footerShow: ({commit})=>{//方法设置
 		commit('footerShow');
 	},
-	footerHide:({commit})=>{
+	footerHide: ({commit})=>{
 		commit('footerHide');
 	},
-	headerShow:({commit})=>{
+	headerShow: ({commit})=>{
 		commit('headerShow');
 	},
-	headerHide:({commit})=>{
+	headerHide: ({commit})=>{
 		commit('headerHide');
 	},
-	loadShow:({commit})=>{
+	loadShow: ({commit})=>{
 		commit('loadShow');
 	},
-	loadHide:({commit})=>{
+	loadHide: ({commit})=>{
 		commit('loadHide');
 	}
 }
+;

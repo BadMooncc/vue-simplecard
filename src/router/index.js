@@ -1,8 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-//import Index from '@/components/Index';
-//import Balance from '@/components/Balance';
-// import Bill from '@/components/Bill';
 import BillInfo from '@/components/BillInfo';
 import HomeGrade from '@/components/HomeGrade';
 import HomeInfo from '@/components/HomeInfo';
@@ -11,17 +8,21 @@ import CouponList from '@/components/CouponList';
 import Wallet from '@/components/Wallet';
 import CouponInfo from '@/components/CouponInfo';
 import parent from '@/components/parent';
-import child from '@/components/child';
-
-
+// import child from '@/components/child';
 
 Vue.use(Router);
-const Index = (reslove) => require.ensure([], () => { reslove(require('@/components/Index.vue')) }, 'Index');
-const MyCoupon = (reslove) => require.ensure([], () => { reslove(require('@/components/MyCoupon.vue')) }, 'MyCoupon');
-const Balance = reslove => require.ensure([], () => { reslove(require('@/components/Balance.vue')) }, 'Balance');
-const Bill = reslove => require.ensure([], () => { reslove (require('@/components/Bill.vue')) }, 'Bill')
-
-
+const Index = (reslove) => require.ensure([], () => {
+  reslove(require('@/components/Index.vue'));
+}, 'Index');
+const MyCoupon = (reslove) => require.ensure([], () => {
+  reslove(require('@/components/MyCoupon.vue'));
+}, 'MyCoupon');
+const Balance = reslove => require.ensure([], () => {
+  reslove(require('@/components/Balance.vue'));
+}, 'Balance');
+const Bill = reslove => require.ensure([], () => {
+  reslove (require('@/components/Bill.vue'));
+}, 'Bill');
 
 export default new Router({
   //scrollBehavior: () => ({ y: 0 }), //滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置
@@ -34,7 +35,6 @@ export default new Router({
         next();
       },
       beforeLeave: (to, form, next) => {
-
         next();
       }
     },
@@ -90,4 +90,4 @@ export default new Router({
     }
 
   ]
-})
+});

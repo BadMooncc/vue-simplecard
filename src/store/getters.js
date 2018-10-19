@@ -1,11 +1,11 @@
 export default{
-	footer(state){
+	footer(state) {
 		return state.footer;
 	},
-	header(state){
+	header(state) {
 		return state.header;
 	},
-	loader(state){
+	loader(state) {
 		return state.loader;
 	}
-}
+};
