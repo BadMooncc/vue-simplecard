@@ -48,3 +48,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 });
+// 11
+// 22
+// 33

@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <CommonHeader v-demo2="{color:'red',text:'hello'}" v-demo:a="123" class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
+      <CommonHeader v-demo2="{color: 'red',text: 'hello'}" v-demo:a="123" class="header-wraper header animate" :class="{'header-wraper header animate header-active':header==false}"></CommonHeader>
     </transition>
     <transition name="fade">
       <router-view/>
     </transition>
-
     <transition>
       <FooterNav v-show="footer"></FooterNav>
     </transition>
@@ -31,10 +30,10 @@
 }
 </style>
 <script>
-import CommonHeader from '@/components/CommonHeader'
-import FooterNav from '@/components/FooterNav'
-import Loader from '@/components/loading'
-import { mapGetters, mapMutations } from 'vuex'
+import CommonHeader from '@/components/CommonHeader';
+import FooterNav from '@/components/FooterNav';
+import Loader from '@/components/loading';
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   name: 'app',
@@ -45,16 +44,16 @@ export default {
   },
   computed: mapGetters(['header', 'footer', 'loader']),
   mounted () {
-    this.footerStatus()
-    this.headerStatus()
-    this.headerScroll()
+    this.footerStatus();
+    this.headerStatus();
+    this.headerScroll();
   },
   watch: {
     // 监控每次路由变化，做出对应的操作
     $route (to, from) {
-      this.footerStatus()
-      this.headerStatus()
-      this.headerScroll()
+      this.footerStatus();
+      this.headerStatus();
+      this.headerScroll();
     }
   },
   methods: {
@@ -66,9 +65,9 @@ export default {
         this.$route.path === '/coupon-list'
       ) {
         // 判断指定路由是否显示底部tabbar
-        this.footerHide()
+        this.footerHide();
       } else {
-        this.footerShow()
+        this.footerShow();
       }
     },
     headerStatus () {
@@ -78,9 +77,9 @@ export default {
         this.$route.path === '/balance'
       ) {
         // 判断指定路由是否显示头部
-        this.headerHide()
+        this.headerHide();
       } else {
-        this.headerShow()
+        this.headerShow();
       }
     },
     headerScroll () {
@@ -107,7 +106,6 @@ export default {
       }
     }
   }
-  
 }
 </script>
 

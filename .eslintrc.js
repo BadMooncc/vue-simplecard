@@ -9,6 +9,10 @@ module.exports = {
     "parserOptions": {
         "sourceType": "module"
     },
+    "plugins": [
+        "vue", //插件，此插件用于识别文件中的js代码，没有MIME类型标识没有script标签也可以识别到，因此拿来识别.vue文件中的js代码
+        "html"
+    ],
     'rules': {
         "comma-dangle": ["error", "never"], //是否允许对象中出现结尾逗号
         "no-cond-assign": 2, //条件语句的条件中不允许出现赋值运算符
