@@ -9,15 +9,14 @@
 import CommonHeader from '@/components/CommonHeader';
 import FooterNav from '@/components/FooterNav';
 import {mapGetters,mapMutations} from 'vuex'
-console.log(mapMutations,'mapMutations');
+// console.log(mapMutations,'mapMutations');
 
 export default {
   name: 'app',
   computed:mapGetters(['header','footer']),
   mounted(){
-    this.footerStatus();
-    this.headerStatus();
-    this.headerScroll();
+    // this.footerStatus();
+    // this.headerStatus();
      
   },
   watch:{
@@ -59,14 +58,14 @@ export default {
               else if (doc.body) { scrollPos = doc.body.scrollTop; }   
               return scrollPos;   
       } 
-      window.onscroll=()=>{
-        var a=getScrollTop();
-        if(a>40){
-          this.$store.dispatch('headerActive');
-        }else{
-          this.$store.dispatch('headerCommon');
-        }
-      }
+      // window.onscroll=()=>{
+      //   var a=getScrollTop();
+      //   if(a>40){
+      //     this.$store.dispatch('headerActive');
+      //   }else{
+      //     this.$store.dispatch('headerCommon');
+      //   }
+      // }
     }
 
   },

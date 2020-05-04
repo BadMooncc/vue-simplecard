@@ -98,8 +98,11 @@
 					<router-link to="/coupon-list">全部 <i class="fa fa-angle-right"></i></router-link>
 				</div>
 			</div>
-			<div class="adver">
-				<img src="../assets/images/adver.jpg"/>
+			<!-- <div v-for="(item,index) in advertList" :key="index" class="advert">
+				<img @click="handleClickAdsBanner(item.id, item.target)"  :src="item.picUrl"/>
+			</div> -->
+      <div class="adver" v-if="advert">
+				<img @click="handleClickAdsBanner('123', '/bill')"  src="../assets/images/adver.jpg"/>
 			</div>
 		</section>
 	</div>
@@ -107,16 +110,35 @@
 <script>
 	export default{
 		data(){
-			return {}
+			return {
+        advertList: [],
+        advert: false
+      }
+    },
+    watch: {
+      advert(val) {
+        if(val) this.$advert.sendAdsShow('123')
+      }
+    },
+    methods: {
+      handleClickAdsBanner(id, targetUrl) {
+        this.$advert.sendAdvert(id, () => {
+          this.$router.push(targetUrl)
+        })
+      }
     },
     mounted(){
-      console.log(this.$route ,'$router')
+      this.advert = true
+      this.$advert.getUserAdsList('5eaa525af5d36f9d4ecfab21').then(res =>{
+        console.log(11111)
+        this.advertList = res.Data
+      })
     },
-		beforeRouteLeave(to, from, next) {
-        // ....
-        //alert('local')
-        next();
-    }
+		// beforeRouteLeave(to, from, next) {
+    //     // ....
+    //     //alert('local')
+    //     next();
+    // }
 	}
 </script>
 <style lang="css" scoped>

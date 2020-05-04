@@ -651,7 +651,7 @@ input{list-style: none;outline: none;}
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	z-index: 100001;
+	z-index: 1;
 }
 .footer-nav nav{
 	margin:0;
