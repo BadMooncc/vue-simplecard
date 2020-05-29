@@ -15,9 +15,10 @@
 			</div>
 		</div>
 	</div>
-	
 </template>
 <style scoped>
-@import '../assets/css/balance.css'
-
+@import '../assets/css/balance.css';
+.demo {
+	width: 100px;
+}
 </style>

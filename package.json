@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "echarts": "^3.8.5",
+    "element-ui": "^2.12.0",
     "swiper": "^4.0.7",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
@@ -30,6 +31,8 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "eslint-plugin-html": "^4.0.6",
+    "eslint-plugin-vue": "^4.7.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",

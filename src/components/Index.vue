@@ -170,8 +170,8 @@
 body {
   background: #f3f3f3;
 }
-#active-space{
-	height: 2rem;
+#active-space {
+  height: 2rem;
 }
 .person {
   height: 10rem;
@@ -191,19 +191,19 @@ body {
   line-height: 60px;
 }
 .person-box-icon {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    background: url(/static/images/nav-icon.png) center no-repeat;
-    background-size: cover;
-    left: 0.2rem;
-    top: 0rem;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: url(/static/images/nav-icon.png) center no-repeat;
+  background-size: cover;
+  left: 0.2rem;
+  top: 0rem;
 }
 .person-box-data {
-    background-position: -11.8rem 0;
+  background-position: -11.8rem 0;
 }
 .person-box-card {
-    background-position: -13.9rem 0;
+  background-position: -13.9rem 0;
 }
 .person .person-info .person-tx img {
   width: 3rem;
@@ -267,22 +267,22 @@ body {
   margin-top: 2rem;
 }
 .person .person-b .person-box {
-    width: 50%;
-    height: 2rem;
-    padding: 0.28rem 1rem;
-    line-height: 2rem;
-    position: relative;
+  width: 50%;
+  height: 2rem;
+  padding: 0.28rem 1rem;
+  line-height: 2rem;
+  position: relative;
 }
 .person .person-b .person-box p {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 5.38rem;
-    height: 0.74rem;
-    color: #fff;
-    font-size: 0.5rem;
-    line-height: 0.7rem;
-    text-indent: 1.3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 5.38rem;
+  height: 0.74rem;
+  color: #fff;
+  font-size: 0.5rem;
+  line-height: 0.7rem;
+  text-indent: 1.3rem;
 }
 .person .person-b .person-box .fa-bookmark-o {
   font-size: 1.5rem;
@@ -387,5 +387,4 @@ nav .my-wallet i {
   height: 4.8rem;
   width: 100%;
 }
-
 </style>

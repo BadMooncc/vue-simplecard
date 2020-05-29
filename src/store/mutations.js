@@ -1,16 +1,21 @@
 export default{
-
-	headerShow(state){
-		state.header=true;
+	headerShow(state) {
+		state.header = true;
 	},
-	headerHide(state){
-		state.header=false;
+	headerHide(state) {
+		state.header = false;
 	},
-	footerShow(state){
-		state.footer=true;
+	footerShow(state) {
+		state.footer = true;
 	},
-	footerHide(state){
-		state.footer=false;
+	footerHide(state) {
+		state.footer = false;
+	},
+	loadShow(state) {
+		state.loader = true;
+	},
+	loadHide(state) {
+		state.loader = false;
 	}
 
-}
+};
