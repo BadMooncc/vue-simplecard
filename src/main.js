@@ -10,7 +10,12 @@ import rem from './assets/js/rem.js';
 import '@/assets/js/common.js';
 import axiosConf from '../config/axios'
 import sdk from '@/utils/sdk'
-Vue.use(new sdk('asd'))
+// axios.get('https://www.fastmock.site/mock/1a9199b70f7f972f4ea242de125df4e9/api/getId').then(res => {
+Vue.use(new sdk('5eaaa59233ccef3c11b769f5'))
+// })
+
+console.log(store, 'store')
+
 import Vconsole from 'vconsole';
 const vConsole = new Vconsole();
 Vue.use(vConsole)

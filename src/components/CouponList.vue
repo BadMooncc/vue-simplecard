@@ -54,7 +54,14 @@
 	</div>
 </template>
 <script>
-	
+	export default {
+		data() {
+
+		},
+		mounted() {
+			this.$advert.sendUser('5a06f6d300000acf28f40c73')
+		}
+	}
 </script>
 <style scoped>
 	@import '../assets/css/coupon-list.css'

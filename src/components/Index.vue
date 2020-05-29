@@ -84,7 +84,6 @@
 						<i></i>
 						<p>我的钱包</p>
 					</router-link>
-					
 				</li>
 			</ul>
 		</nav>
@@ -102,7 +101,15 @@
 				<img @click="handleClickAdsBanner(item.id, item.target)"  :src="item.picUrl"/>
 			</div> -->
       <div class="adver" v-if="advert">
-				<img @click="handleClickAdsBanner('123', '/bill')"  src="../assets/images/adver.jpg"/>
+        <template v-for="(item, index) in advertList">
+          <img
+            v-if="item.type===1"
+            @click="handleClickAdsBanner({ads_id: item.id,materiaId: item.materiaId}, item.targetUrl)"
+            :key="index"  
+            :src="item.picUrl"
+          />
+          <h4 class="txt_advert" @click="handleClickAdsBanner({ads_id: item.id,materiaId: item.materiaId}, item.targetUrl)" :key="index"  v-else>{{item.content}}</h4>
+        </template>
 			</div>
 		</section>
 	</div>
@@ -112,27 +119,45 @@
 		data(){
 			return {
         advertList: [],
-        advert: false
+        advert: false,
+        ads_id: ''
       }
     },
-    watch: {
-      advert(val) {
-        if(val) this.$advert.sendAdsShow('123')
-      }
-    },
+    // watch: {
+    //   advert(val) {
+    //     let ads = []
+    //     this.$http.get('https://www.fastmock.site/mock/1a9199b70f7f972f4ea242de125df4e9/api/getId').then(res => {
+    //       this.ads_id = res.data.ads_id
+    //       if(val) this.$advert.sendAdsShow(res.data.ads_id)
+    //     })
+    //   }
+    // },
     methods: {
       handleClickAdsBanner(id, targetUrl) {
+        console.log(123)
         this.$advert.sendAdvert(id, () => {
-          this.$router.push(targetUrl)
+          console.log(this.$router)
+          // if(targetUrl) window.open(targetUrl)
         })
       }
     },
     mounted(){
-      this.advert = true
-      this.$advert.getUserAdsList('5eaa525af5d36f9d4ecfab21').then(res =>{
-        console.log(11111)
-        this.advertList = res.Data
-      })
+      // this.$http.get('https://www.fastmock.site/mock/1a9199b70f7f972f4ea242de125df4e9/api/getId').then(result => {
+        this.advert = true
+        this.$advert.getUserAdsList('5ecc85a02ef5d461272527d3').then(res =>{
+          console.log(1)
+          this.advertList = res.data
+          let ids = this.advertList.map(item => {
+            return {
+              ads_id: item.id,
+              materiaId: item.materiaId
+            }
+          })
+          
+          this.$advert.sendAdsShow(ids)
+        })
+      console.log(this.$advert)
+      
     },
 		// beforeRouteLeave(to, from, next) {
     //     // ....
@@ -161,7 +186,10 @@ body {
 .person .person-info .person-tx {
   width: 3rem;
 }
-
+.txt_advert {
+  text-align: center;
+  line-height: 60px;
+}
 .person-box-icon {
     position: absolute;
     width: 2rem;
